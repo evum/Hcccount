@@ -26,7 +26,7 @@ class Nerv
 
     public double[] compensationSistol(int hcc, int opss1, int opss2, int opss3, int ock, double t, double s)
     {
-        double[] res = new double[4];
+        double[] res = new double[5];
         double x;
         double deltaS = s - 80;
         double newHcc;

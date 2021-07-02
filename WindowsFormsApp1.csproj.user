@@ -5,7 +5,7 @@
     <RemoteDebugEnabled>false</RemoteDebugEnabled>
   </PropertyGroup>
   <PropertyGroup>
-    <PublishUrlHistory>C:\Users\Евгений\Desktop\Новая папка\|https://hcccount.000webhostapp.com/|C:\Users\Евгений\Desktop\|publish\</PublishUrlHistory>
+    <PublishUrlHistory>C:\Users\Евгений\Desktop\Hcccount\|C:\Users\Евгений\Desktop\Новая папка\|https://hcccount.000webhostapp.com/|C:\Users\Евгений\Desktop\|publish\</PublishUrlHistory>
     <InstallUrlHistory>https://hcccount.000webhostapp.com/|https://hcccount.000webhostapp.com/Hcccount.exe/</InstallUrlHistory>
     <SupportUrlHistory>https://hcccount.000webhostapp.com/</SupportUrlHistory>
     <UpdateUrlHistory>https://hcccount.000webhostapp.com/|https://hcccount.000webhostapp.com/Hcccount.exe/</UpdateUrlHistory>

@@ -2,7 +2,6 @@
 using System.IO;
 using System.Windows.Forms;
 
-
 namespace WindowsFormsApp1
 {
 
@@ -14,6 +13,8 @@ namespace WindowsFormsApp1
         private const String TOOLOWPRESSURE = "Давление слишком низкое";
         private const String DEAD = "Вы убили его!";
 
+        private string path = "";
+
         private Result body = new Result();
         public Form1()
         {
@@ -23,7 +24,6 @@ namespace WindowsFormsApp1
             label6.Text = String.Format("Текущее значение: {0}", trackBarHcc.Value);
             body.shet();
             Print();
-            position();
         }
 
         
@@ -202,71 +202,12 @@ namespace WindowsFormsApp1
             buttonK_Click(this, e);
         }
 
-        private void checkBoxNerv_CheckedChanged(object sender, EventArgs e)
-        {
-            var res = body.NervRegulation();
-            labelNervComp.Text = "Значение опсс1 должно быть: " + res[0] + "\nЗначение опсс2 должно быть: " + res[1] + "\nЗначение оцк должно быть: " + res[2];
-            
-        }
-
-        private void trackBarRun_Scroll(object sender, EventArgs e)
-        {
-            body.NervSetNums("Run", trackBarRun.Value);
-            if (checkBoxNerv.Checked == true)
-            {
-                checkBoxNerv_CheckedChanged(this, e);
-            }
-
-        }
-
-        private void trackBarEat_Scroll(object sender, EventArgs e)
-        {
-            body.NervSetNums("Eat", trackBarEat.Value);
-            if (checkBoxNerv.Checked == true)
-            {
-                checkBoxNerv_CheckedChanged(this, e);
-            }
-        }
-
-        private void trackBarThink_Scroll(object sender, EventArgs e)
-        {
-            body.NervSetNums("Think", trackBarThink.Value);
-            if (checkBoxNerv.Checked == true)
-            {
-                checkBoxNerv_CheckedChanged(this, e);
-            }
-        }
-
-        public void position()
-        {
-            int startPoint = 100;
-            int stepForLabel = 16;
-            int stepForTrackBar = 64;
-            int[] coory = new int[8];
-            for (int i = 0; i < 4; i++)
-            {
-                coory[i] = Height - (startPoint + i * stepForTrackBar);
-            }
-            for (int i = 4; i < coory.Length; i++)
-            {
-                coory[i] = coory[i - 4] - stepForLabel;
-            }
-            trackBarOck.Location = new System.Drawing.Point(Width - 300, coory[0]);
-            trackBarOpss1.Location = new System.Drawing.Point(Width - 300, coory[1]);
-            trackBarOpss2.Location = new System.Drawing.Point(Width - 300, coory[2]);
-            trackBarOpss3.Location = new System.Drawing.Point(Width - 300, coory[3]);
-            labelOck.Location = new System.Drawing.Point(Width - 269, coory[4]);
-            labelOpss1.Location = new System.Drawing.Point(Width - 269, coory[5]);
-            labelOpss2.Location = new System.Drawing.Point(Width - 269, coory[6]);
-            labelOpss3.Location = new System.Drawing.Point(Width - 269, coory[7]);
-
-        }
-
         private void buttonNerv_Click(object sender, EventArgs e)
         {
             var res = body.NervRegulation();
-            labelNervComp.Text = "Значение опсс1 должно быть: " + res[0] + "\nЗначение опсс2 должно быть: " + res[1] + "\nЗначение оцк должно быть: " + res[2] + "\nЗначение X: " + res[3];
-            
+            labelNervComp.Text = "Диастолическое: " + "\nЗначение опсс1 должно быть: " + res[0][0] + "\nЗначение опсс2 должно быть: " + res[0][1] + "\nЗначение оцк должно быть: " + res[0][2] + "\nЗначение X: " + res[0][3] +
+                "Значение ЧСС: " + res[0][4] + "\nСистолическое: " + "\nЗначение опсс1 должно быть: " + res[1][0] + "\nЗначение опсс2 должно быть: " + res[1][1] + "\nЗначение оцк должно быть: " + res[1][2] + "\nЗначение X: " + res[1][3];
+            Print();
             
         }
 
@@ -275,22 +216,24 @@ namespace WindowsFormsApp1
             var res = body.NervRegulation();
             var nums = body.GetNums();
 
-            string path = "D:\\HccDataLog\\";
-            string fileName = path + "data" + DateTime.Today.ToShortDateString() + ".txt";
+            FolderBrowserDialog logDialog = new FolderBrowserDialog();
 
-            DirectoryInfo dirInfo = new DirectoryInfo(path);
-            if (!dirInfo.Exists)
+            if (path == "")
             {
-                dirInfo.Create();
+                logDialog.ShowDialog();
+                path = logDialog.SelectedPath;
             }
+
+            string fileName = path + "\\data" + DateTime.Today.ToShortDateString() + ".txt";
 
             try
             {
                 using (FileStream sw = new FileStream(fileName, FileMode.Append))
                 {
-                    byte[] writingString = System.Text.Encoding.Default.GetBytes("\n*********** " + "\nOпсс1: " + res[0] + "      Опсс2: " + res[1] + "       Оцк: " + res[2] + "      x: " + res[3]
-                        + "\nЧсс: " + nums["Hcc"] + "      Oпсс1: " + nums["Opss1"] + "      Oпсс2: " + nums["Opss2"]
-                        + "      Oпсс3: " + nums["Opss3"] + "      Ock: " + nums["Ock"] + "\n\n\n");
+                    byte[] writingString = System.Text.Encoding.Default.GetBytes("\n*********** " + "\nDiastol ==============" + "\nOpss1: " + res[0][0] + "      Opss2: " + res[0][1] + "       Ock: " + res[0][2] + "      x: " + res[0][3]
+                        + "\nSistol ========================= " + "\nOpss1: " + res[1][0] + "      Opss2: " + res[1][1] + "       Ock: " + res[1][2] + "      x: " + res[1][3]
+                        + "\nData =================" + "\nHcc: " + nums["Hcc"] + "      Opss1: " + nums["Opss1"] + "      Opss2: " + nums["Opss2"]
+                        + "      Opss3: " + nums["Opss3"] + "      Ock: " + nums["Ock"] + "\n\n\n");
                     sw.Write(writingString, 0, writingString.Length);
                 }
             }

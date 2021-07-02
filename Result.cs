@@ -120,9 +120,18 @@ public class Result
     {
         s = Math.Round((t * Hcc * 3 * (Opss1 + Opss2 + Opss3) * 4 * Ock) / 1000);
     }
+    
+    private void res_s(double hcc, double opss1, double opss2, double opss3, double ock)
+    {
+        s = Math.Round((t * hcc * 3 * (opss1 + opss2 + opss3) * 4 * ock) / 1000);
+    }
     private void res_d()
     {
         d = Math.Round((t_d * Hcc * 6 * (Opss1 + Opss2 + Opss3) * 4 * Ock) / 1000);
+    }
+    private void res_d(double hcc, double opss1, double opss2, double opss3, double ock)
+    {
+        d = Math.Round((t_d * hcc * 6 * (opss1 + opss2 + opss3) * 4 * ock) / 1000);
     }
     private void res_a()
     {
@@ -148,13 +157,14 @@ public class Result
         nerv = new Nerv();
     }
 
-    public void NervSetNums(String name, int value)
+    public double[][] NervRegulation()
     {
-        nerv.setNums(name, value);
-    }
-    public double[] NervRegulation()
-    {
-        var res = nerv.compensation(Hcc, Opss1, Opss2, Opss3, Ock);
+        double[][] res = new double[2][];
+        res[0] = nerv.compensationDiastol(Hcc, Opss1, Opss2, Opss3, Ock, t_d, d);
+        res[1] = nerv.compensationSistol(Hcc, Opss1, Opss2, Opss3, Ock, t, s);
+
+        res_s(Hcc, res[1][0], res[1][1], Opss3, res[1][2]);
+        res_d(Hcc, res[0][0], res[0][1], Opss3, res[0][2]);
         return res;
     }
 }

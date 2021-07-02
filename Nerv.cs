@@ -4,56 +4,40 @@
 
 class Nerv
    {
-    private int Run = 4;
-    private int Eat = 4;
-    private int Think = 4;
-
-    public int NewOpss(String name)
+    public Nerv()
     {
-        int value = 0;
-        if (name == "Opss1")
-        {
-            value = 6 - Run;
-        }
-        else if (name == "Opss2")
-        {
-            value = 6 - Eat;
-        }
-        else if (name == "Opss3")
-        {
-            value = 6 - Think;
-        }
-        return value;
     }
 
-    public void setNums(String name, int value)
+    public double[] compensationDiastol(int hcc, int opss1, int opss2, int opss3, int ock, double t_d, double d)
     {
-        if (name == "Run")
-        {
-            Run = value;
-        }
-        else if (name == "Eat")
-        {
-            Eat = value;
-        }
-        else if (name == "Think")
-        {
-            Think = value;
-        }
-    }
-
-    public double[] compensation(int hcc, int opss1, int opss2, int opss3, int ock)
-    {
-        double[] res = new double[4];
+        double[] res = new double[5];
         double x;
-        x = (-opss1 - opss2 - opss3 - 4 * ock + Math.Sqrt(Math.Pow(opss1 + opss2 + opss3 + 4 * ock, 2) - 16 * ((-5000 / (3 * hcc)) + ock * (opss1 + opss2 + opss3)))) / 8;
+        double deltaD = d - 80;
+        double newHcc;
+        newHcc = hcc + (0.4 * deltaD + t_d * hcc - 2 * hcc) / 2;
+        x = (-opss1 - opss2 - opss3 - 4 * ock + Math.Sqrt(Math.Pow(opss1 + opss2 + opss3 + 4 * ock, 2) - 16 * ((-10000 / (3 * t_d * newHcc)) + ock * (opss1 + opss2 + opss3)))) / 8;
         res[0] = Math.Abs(opss1 + 2 * x);
         res[1] = Math.Abs(opss2 + 2 * x);
         res[2] = Math.Abs(ock + x);
         res[3] = x;
+        res[4] = newHcc;
         return res;
     }
-    public Nerv() 
+
+    public double[] compensationSistol(int hcc, int opss1, int opss2, int opss3, int ock, double t, double s)
     {
+        double[] res = new double[4];
+        double x;
+        double deltaS = s - 80;
+        double newHcc;
+        newHcc = hcc + (0.4 * deltaS + t * hcc - 6 * hcc) / 6;
+        x = (-opss1 - opss2 - opss3 - 4 * ock + Math.Sqrt(Math.Pow(opss1 + opss2 + opss3 + 4 * ock, 2) - 16 * ((-10000 / (t * hcc)) + ock * (opss1 + opss2 + opss3)))) / 8;
+        res[0] = Math.Abs(opss1 + 2 * x);
+        res[1] = Math.Abs(opss2 + 2 * x);
+        res[2] = Math.Abs(ock + x);
+        res[3] = x;
+        res[4] = newHcc;
+        return res;
     }
+
 }

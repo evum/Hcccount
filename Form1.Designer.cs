@@ -78,7 +78,7 @@ namespace WindowsFormsApp1
             // 
             this.textBoxS.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.textBoxS.Cursor = System.Windows.Forms.Cursors.Default;
-            this.textBoxS.Location = new System.Drawing.Point(12, 169);
+            this.textBoxS.Location = new System.Drawing.Point(12, 165);
             this.textBoxS.Name = "textBoxS";
             this.textBoxS.ReadOnly = true;
             this.textBoxS.Size = new System.Drawing.Size(120, 20);
@@ -90,7 +90,7 @@ namespace WindowsFormsApp1
             // trackBarHcc
             // 
             this.trackBarHcc.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.trackBarHcc.Location = new System.Drawing.Point(12, 46);
+            this.trackBarHcc.Location = new System.Drawing.Point(12, 42);
             this.trackBarHcc.Maximum = 200;
             this.trackBarHcc.Name = "trackBarHcc";
             this.trackBarHcc.Size = new System.Drawing.Size(343, 45);
@@ -103,7 +103,7 @@ namespace WindowsFormsApp1
             // 
             this.labelHcc.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelHcc.AutoSize = true;
-            this.labelHcc.Location = new System.Drawing.Point(228, 17);
+            this.labelHcc.Location = new System.Drawing.Point(228, 13);
             this.labelHcc.Name = "labelHcc";
             this.labelHcc.Size = new System.Drawing.Size(29, 13);
             this.labelHcc.TabIndex = 7;
@@ -114,7 +114,7 @@ namespace WindowsFormsApp1
             // 
             this.labelOpss1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.labelOpss1.AutoSize = true;
-            this.labelOpss1.Location = new System.Drawing.Point(1053, 238);
+            this.labelOpss1.Location = new System.Drawing.Point(1045, 230);
             this.labelOpss1.Name = "labelOpss1";
             this.labelOpss1.Size = new System.Drawing.Size(43, 13);
             this.labelOpss1.TabIndex = 8;
@@ -125,7 +125,7 @@ namespace WindowsFormsApp1
             // 
             this.trackBarOpss1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.trackBarOpss1.LargeChange = 1;
-            this.trackBarOpss1.Location = new System.Drawing.Point(1018, 254);
+            this.trackBarOpss1.Location = new System.Drawing.Point(1010, 246);
             this.trackBarOpss1.Maximum = 6;
             this.trackBarOpss1.Name = "trackBarOpss1";
             this.trackBarOpss1.Size = new System.Drawing.Size(104, 45);
@@ -139,7 +139,7 @@ namespace WindowsFormsApp1
             this.trackBarOck.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.trackBarOck.BackColor = System.Drawing.SystemColors.Control;
             this.trackBarOck.LargeChange = 1;
-            this.trackBarOck.Location = new System.Drawing.Point(1018, 444);
+            this.trackBarOck.Location = new System.Drawing.Point(1010, 436);
             this.trackBarOck.Maximum = 7;
             this.trackBarOck.Name = "trackBarOck";
             this.trackBarOck.Size = new System.Drawing.Size(104, 45);
@@ -152,7 +152,7 @@ namespace WindowsFormsApp1
             // 
             this.labelOck.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.labelOck.AutoSize = true;
-            this.labelOck.Location = new System.Drawing.Point(1049, 428);
+            this.labelOck.Location = new System.Drawing.Point(1041, 420);
             this.labelOck.Name = "labelOck";
             this.labelOck.Size = new System.Drawing.Size(30, 13);
             this.labelOck.TabIndex = 10;
@@ -164,7 +164,7 @@ namespace WindowsFormsApp1
             this.trackBarOpss3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.trackBarOpss3.BackColor = System.Drawing.SystemColors.Control;
             this.trackBarOpss3.LargeChange = 1;
-            this.trackBarOpss3.Location = new System.Drawing.Point(1018, 380);
+            this.trackBarOpss3.Location = new System.Drawing.Point(1010, 372);
             this.trackBarOpss3.Maximum = 6;
             this.trackBarOpss3.Name = "trackBarOpss3";
             this.trackBarOpss3.Size = new System.Drawing.Size(104, 45);
@@ -177,7 +177,7 @@ namespace WindowsFormsApp1
             // 
             this.labelOpss3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.labelOpss3.AutoSize = true;
-            this.labelOpss3.Location = new System.Drawing.Point(1049, 364);
+            this.labelOpss3.Location = new System.Drawing.Point(1041, 356);
             this.labelOpss3.Name = "labelOpss3";
             this.labelOpss3.Size = new System.Drawing.Size(43, 13);
             this.labelOpss3.TabIndex = 12;
@@ -188,7 +188,7 @@ namespace WindowsFormsApp1
             // 
             this.trackBarOpss2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.trackBarOpss2.LargeChange = 1;
-            this.trackBarOpss2.Location = new System.Drawing.Point(1018, 318);
+            this.trackBarOpss2.Location = new System.Drawing.Point(1010, 310);
             this.trackBarOpss2.Maximum = 6;
             this.trackBarOpss2.Name = "trackBarOpss2";
             this.trackBarOpss2.Size = new System.Drawing.Size(104, 45);
@@ -201,7 +201,7 @@ namespace WindowsFormsApp1
             // 
             this.labelOpss2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.labelOpss2.AutoSize = true;
-            this.labelOpss2.Location = new System.Drawing.Point(1053, 302);
+            this.labelOpss2.Location = new System.Drawing.Point(1045, 294);
             this.labelOpss2.Name = "labelOpss2";
             this.labelOpss2.Size = new System.Drawing.Size(43, 13);
             this.labelOpss2.TabIndex = 14;
@@ -212,7 +212,7 @@ namespace WindowsFormsApp1
             // 
             this.textBoxD.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.textBoxD.Cursor = System.Windows.Forms.Cursors.Default;
-            this.textBoxD.Location = new System.Drawing.Point(12, 196);
+            this.textBoxD.Location = new System.Drawing.Point(12, 192);
             this.textBoxD.Name = "textBoxD";
             this.textBoxD.ReadOnly = true;
             this.textBoxD.Size = new System.Drawing.Size(120, 20);
@@ -224,7 +224,7 @@ namespace WindowsFormsApp1
             // buttonHcc
             // 
             this.buttonHcc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonHcc.Location = new System.Drawing.Point(624, 154);
+            this.buttonHcc.Location = new System.Drawing.Point(616, 154);
             this.buttonHcc.Name = "buttonHcc";
             this.buttonHcc.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.buttonHcc.Size = new System.Drawing.Size(15, 15);
@@ -236,7 +236,7 @@ namespace WindowsFormsApp1
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(194, 30);
+            this.label6.Location = new System.Drawing.Point(194, 26);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(0, 13);
             this.label6.TabIndex = 18;
@@ -245,7 +245,7 @@ namespace WindowsFormsApp1
             // buttonOpss2
             // 
             this.buttonOpss2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonOpss2.Location = new System.Drawing.Point(713, 447);
+            this.buttonOpss2.Location = new System.Drawing.Point(705, 447);
             this.buttonOpss2.Name = "buttonOpss2";
             this.buttonOpss2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.buttonOpss2.Size = new System.Drawing.Size(15, 15);
@@ -256,7 +256,7 @@ namespace WindowsFormsApp1
             // buttonOpss1
             // 
             this.buttonOpss1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonOpss1.Location = new System.Drawing.Point(663, 306);
+            this.buttonOpss1.Location = new System.Drawing.Point(655, 306);
             this.buttonOpss1.Name = "buttonOpss1";
             this.buttonOpss1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.buttonOpss1.Size = new System.Drawing.Size(15, 15);
@@ -267,7 +267,7 @@ namespace WindowsFormsApp1
             // buttonOpss3
             // 
             this.buttonOpss3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonOpss3.Location = new System.Drawing.Point(685, 117);
+            this.buttonOpss3.Location = new System.Drawing.Point(677, 117);
             this.buttonOpss3.Name = "buttonOpss3";
             this.buttonOpss3.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.buttonOpss3.Size = new System.Drawing.Size(15, 15);
@@ -278,7 +278,7 @@ namespace WindowsFormsApp1
             // buttonOck
             // 
             this.buttonOck.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonOck.Location = new System.Drawing.Point(663, 244);
+            this.buttonOck.Location = new System.Drawing.Point(655, 244);
             this.buttonOck.Name = "buttonOck";
             this.buttonOck.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.buttonOck.Size = new System.Drawing.Size(15, 15);
@@ -291,7 +291,7 @@ namespace WindowsFormsApp1
             this.buttonS.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonS.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.buttonS.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.buttonS.Location = new System.Drawing.Point(685, 60);
+            this.buttonS.Location = new System.Drawing.Point(677, 60);
             this.buttonS.Name = "buttonS";
             this.buttonS.Size = new System.Drawing.Size(15, 15);
             this.buttonS.TabIndex = 23;
@@ -303,7 +303,7 @@ namespace WindowsFormsApp1
             this.buttonD.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonD.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.buttonD.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.buttonD.Location = new System.Drawing.Point(608, 224);
+            this.buttonD.Location = new System.Drawing.Point(600, 224);
             this.buttonD.Name = "buttonD";
             this.buttonD.Size = new System.Drawing.Size(15, 15);
             this.buttonD.TabIndex = 24;
@@ -314,7 +314,7 @@ namespace WindowsFormsApp1
             // 
             this.textBoxA.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.textBoxA.Cursor = System.Windows.Forms.Cursors.Default;
-            this.textBoxA.Location = new System.Drawing.Point(12, 222);
+            this.textBoxA.Location = new System.Drawing.Point(12, 218);
             this.textBoxA.Name = "textBoxA";
             this.textBoxA.ReadOnly = true;
             this.textBoxA.Size = new System.Drawing.Size(120, 20);
@@ -328,7 +328,7 @@ namespace WindowsFormsApp1
             this.buttonA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonA.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.buttonA.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.buttonA.Location = new System.Drawing.Point(732, 163);
+            this.buttonA.Location = new System.Drawing.Point(724, 163);
             this.buttonA.Name = "buttonA";
             this.buttonA.Size = new System.Drawing.Size(15, 15);
             this.buttonA.TabIndex = 26;
@@ -341,7 +341,7 @@ namespace WindowsFormsApp1
             this.buttonV.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.buttonV.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonV.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.buttonV.Location = new System.Drawing.Point(638, 524);
+            this.buttonV.Location = new System.Drawing.Point(630, 524);
             this.buttonV.Name = "buttonV";
             this.buttonV.Size = new System.Drawing.Size(15, 15);
             this.buttonV.TabIndex = 27;
@@ -352,7 +352,7 @@ namespace WindowsFormsApp1
             // 
             this.textBoxV.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.textBoxV.Cursor = System.Windows.Forms.Cursors.Default;
-            this.textBoxV.Location = new System.Drawing.Point(12, 248);
+            this.textBoxV.Location = new System.Drawing.Point(12, 244);
             this.textBoxV.Name = "textBoxV";
             this.textBoxV.ReadOnly = true;
             this.textBoxV.Size = new System.Drawing.Size(120, 20);
@@ -365,7 +365,7 @@ namespace WindowsFormsApp1
             // 
             this.textBoxK.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.textBoxK.Cursor = System.Windows.Forms.Cursors.Default;
-            this.textBoxK.Location = new System.Drawing.Point(12, 274);
+            this.textBoxK.Location = new System.Drawing.Point(12, 270);
             this.textBoxK.Name = "textBoxK";
             this.textBoxK.ReadOnly = true;
             this.textBoxK.Size = new System.Drawing.Size(120, 20);
@@ -379,7 +379,7 @@ namespace WindowsFormsApp1
             this.buttonK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonK.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.buttonK.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.buttonK.Location = new System.Drawing.Point(685, 154);
+            this.buttonK.Location = new System.Drawing.Point(677, 154);
             this.buttonK.Name = "buttonK";
             this.buttonK.Size = new System.Drawing.Size(15, 15);
             this.buttonK.TabIndex = 30;
@@ -390,7 +390,7 @@ namespace WindowsFormsApp1
             // 
             this.textBoxK_3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.textBoxK_3.Cursor = System.Windows.Forms.Cursors.Default;
-            this.textBoxK_3.Location = new System.Drawing.Point(12, 352);
+            this.textBoxK_3.Location = new System.Drawing.Point(12, 348);
             this.textBoxK_3.Name = "textBoxK_3";
             this.textBoxK_3.ReadOnly = true;
             this.textBoxK_3.Size = new System.Drawing.Size(120, 20);
@@ -403,7 +403,7 @@ namespace WindowsFormsApp1
             // 
             this.textBoxK_2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.textBoxK_2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.textBoxK_2.Location = new System.Drawing.Point(12, 326);
+            this.textBoxK_2.Location = new System.Drawing.Point(12, 322);
             this.textBoxK_2.Name = "textBoxK_2";
             this.textBoxK_2.ReadOnly = true;
             this.textBoxK_2.Size = new System.Drawing.Size(120, 20);
@@ -416,7 +416,7 @@ namespace WindowsFormsApp1
             // 
             this.textBoxK_1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.textBoxK_1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.textBoxK_1.Location = new System.Drawing.Point(12, 300);
+            this.textBoxK_1.Location = new System.Drawing.Point(12, 296);
             this.textBoxK_1.Name = "textBoxK_1";
             this.textBoxK_1.ReadOnly = true;
             this.textBoxK_1.Size = new System.Drawing.Size(120, 20);
@@ -430,7 +430,7 @@ namespace WindowsFormsApp1
             this.buttonK_1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonK_1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.buttonK_1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.buttonK_1.Location = new System.Drawing.Point(638, 383);
+            this.buttonK_1.Location = new System.Drawing.Point(630, 383);
             this.buttonK_1.Name = "buttonK_1";
             this.buttonK_1.Size = new System.Drawing.Size(15, 15);
             this.buttonK_1.TabIndex = 34;
@@ -442,7 +442,7 @@ namespace WindowsFormsApp1
             this.buttonK_3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonK_3.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.buttonK_3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.buttonK_3.Location = new System.Drawing.Point(713, 288);
+            this.buttonK_3.Location = new System.Drawing.Point(705, 288);
             this.buttonK_3.Name = "buttonK_3";
             this.buttonK_3.Size = new System.Drawing.Size(15, 15);
             this.buttonK_3.TabIndex = 35;
@@ -454,7 +454,7 @@ namespace WindowsFormsApp1
             this.buttonK_2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonK_2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.buttonK_2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.buttonK_2.Location = new System.Drawing.Point(694, 195);
+            this.buttonK_2.Location = new System.Drawing.Point(686, 195);
             this.buttonK_2.Name = "buttonK_2";
             this.buttonK_2.Size = new System.Drawing.Size(15, 15);
             this.buttonK_2.TabIndex = 36;
@@ -464,7 +464,7 @@ namespace WindowsFormsApp1
             // buttonExit
             // 
             this.buttonExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonExit.Location = new System.Drawing.Point(191, 661);
+            this.buttonExit.Location = new System.Drawing.Point(191, 653);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(149, 61);
             this.buttonExit.TabIndex = 37;
@@ -475,7 +475,7 @@ namespace WindowsFormsApp1
             // buttonOpenAll
             // 
             this.buttonOpenAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonOpenAll.Location = new System.Drawing.Point(6, 661);
+            this.buttonOpenAll.Location = new System.Drawing.Point(6, 653);
             this.buttonOpenAll.Name = "buttonOpenAll";
             this.buttonOpenAll.Size = new System.Drawing.Size(117, 23);
             this.buttonOpenAll.TabIndex = 42;
@@ -487,7 +487,7 @@ namespace WindowsFormsApp1
             // 
             this.labelNervComp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelNervComp.AutoSize = true;
-            this.labelNervComp.Location = new System.Drawing.Point(15, 475);
+            this.labelNervComp.Location = new System.Drawing.Point(15, 467);
             this.labelNervComp.Name = "labelNervComp";
             this.labelNervComp.Size = new System.Drawing.Size(33, 13);
             this.labelNervComp.TabIndex = 50;
@@ -496,7 +496,7 @@ namespace WindowsFormsApp1
             // buttonNerv
             // 
             this.buttonNerv.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonNerv.Location = new System.Drawing.Point(1027, 585);
+            this.buttonNerv.Location = new System.Drawing.Point(1019, 577);
             this.buttonNerv.Name = "buttonNerv";
             this.buttonNerv.Size = new System.Drawing.Size(75, 23);
             this.buttonNerv.TabIndex = 51;
@@ -507,7 +507,7 @@ namespace WindowsFormsApp1
             // buttonSaveLog
             // 
             this.buttonSaveLog.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonSaveLog.Location = new System.Drawing.Point(984, 692);
+            this.buttonSaveLog.Location = new System.Drawing.Point(976, 684);
             this.buttonSaveLog.Name = "buttonSaveLog";
             this.buttonSaveLog.Size = new System.Drawing.Size(160, 24);
             this.buttonSaveLog.TabIndex = 52;
@@ -520,7 +520,7 @@ namespace WindowsFormsApp1
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Hcccount.Properties.Resources.background;
-            this.ClientSize = new System.Drawing.Size(1362, 741);
+            this.ClientSize = new System.Drawing.Size(1354, 733);
             this.Controls.Add(this.buttonSaveLog);
             this.Controls.Add(this.buttonNerv);
             this.Controls.Add(this.labelNervComp);

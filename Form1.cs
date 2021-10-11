@@ -107,6 +107,10 @@ namespace WindowsFormsApp1
         {
             textBoxD.Visible = !textBoxD.Visible;
         }
+
+        /// <summary>
+        /// Функция вывода результатов вычислений
+        /// </summary>
         public void Print()
         {
 
@@ -202,18 +206,30 @@ namespace WindowsFormsApp1
             buttonK_Click(this, e);
         }
 
+
+        /// <summary>
+        /// функция нажатия на кнопку нерва-депрессора
+        /// </summary>
         private void buttonNerv_Click(object sender, EventArgs e)
         {
-            var res = body.NervRegulation();
-            labelNervComp.Text = "Диастолическое: " + "\nЗначение опсс1 должно быть: " + res[0][0] + "\nЗначение опсс2 должно быть: " + res[0][1] + "\nЗначение оцк должно быть: " + res[0][2] + "\nЗначение X: " + res[0][3] +
-                "\nЗначение ЧСС: " + res[0][4] + "\nСистолическое: " + "\nЗначение опсс1 должно быть: " + res[1][0] + "\nЗначение опсс2 должно быть: " + res[1][1] + "\nЗначение оцк должно быть: " + res[1][2] + "\nЗначение X: " + res[1][3] + "\nЗначение ЧСС: " + res[1][4];
-            Print();
-            
+            double sistol; 
+            double diastol;
+            var res = body.NervRegulation(); // Вызов функции поиска новых значений
+            sistol = body.res_s(res["Hcc"], res["Opss1"], res["Opss2"], res["Opss3"], res["Ock"]); // Подсчёт систолического давления для новых значений
+            diastol = body.res_d(res["Hcc"], res["Opss1"], res["Opss2"], res["Opss3"], res["Ock"]);// Подсчёт диастолического давления для новых значений
+            labelNervComp.Text = "Диастолическое: " + "\nЗначение опсс1 должно быть: " + res["Opss1"] + "\nЗначение опсс2 должно быть: " +
+                res["Opss2"] + "\nЗначение оцк должно быть: " + res["Ock"] + "\nЗначение Чсс: " + res["Hcc"] + "\nСистолическое: " + sistol +
+                "\nДиастолическое: " + diastol; //Вывод всех значений
+
         }
 
+
+        /// <summary>
+        /// Функция сохранения результатов вычислений в файл
+        /// </summary>
         private void buttonSaveLog_Click(object sender, EventArgs e)
         {
-            var res = body.NervRegulation();
+            /*var res = body.NervRegulation();
             var nums = body.GetNums();
 
             FolderBrowserDialog logDialog = new FolderBrowserDialog();
@@ -240,7 +256,7 @@ namespace WindowsFormsApp1
             catch (Exception r)
             {
                 Console.WriteLine(r.Message);
-            }
+            }*/
         }
     }
 }

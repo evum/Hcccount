@@ -1,43 +1,31 @@
 ﻿using System;
+using System.Collections.Generic;
 
-
-
+/// <summary>
+/// Класс, реализующий логику работы нерва-депрессора
+/// </summary>
 class Nerv
    {
+    private Counter mathematics;
     public Nerv()
     {
+        mathematics = new Counter();
     }
 
-    public double[] compensationDiastol(int hcc, int opss1, int opss2, int opss3, int ock, double t_d, double d)
+    /// <summary>
+    /// Функция вычисления всех параметров
+    /// </summary>
+    /// <returns>Коллекция новых значений для Чсс, опсс 1, 2, 3 и оцк</returns>
+    public Dictionary<String, double> Сompensation(int hcc, int opss1, int opss2, int opss3, int ock, double t)
     {
-        double[] res = new double[5];
+        var res = new Dictionary<String, double>();
         double x;
-        double deltaD = d - 80;
-        double newHcc;
-        newHcc = hcc + (0.4 * deltaD + t_d * hcc - 2 * hcc) / 2;
-        x = (-opss1 - opss2 - opss3 - 4 * ock + Math.Sqrt(Math.Pow(opss1 + opss2 + opss3 + 4 * ock, 2) - 16 * ((-10000 / (3 * t_d * newHcc)) + ock * (opss1 + opss2 + opss3)))) / 8;
-        res[0] = Math.Abs(opss1 + 2 * x);
-        res[1] = Math.Abs(opss2 + 2 * x);
-        res[2] = Math.Abs(ock + x);
-        res[3] = x;
-        res[4] = newHcc;
+        x = mathematics.FindRoots(hcc, opss1, opss2, opss3, ock, t);
+        res["Opss1"] = Math.Abs(opss1 + 3 * x) % 6;
+        res["Opss2"] = Math.Abs(opss2 + 3 * x) % 6;
+        res["Opss3"] = opss3;
+        res["Ock"] = Math.Abs(ock + x) % 7;
+        res["Hcc"] = (hcc + 3 * x) % hcc;
         return res;
     }
-
-    public double[] compensationSistol(int hcc, int opss1, int opss2, int opss3, int ock, double t, double s)
-    {
-        double[] res = new double[5];
-        double x;
-        double deltaS = s - 80;
-        double newHcc;
-        newHcc = hcc + (0.4 * deltaS + t * hcc - 6 * hcc) / 6;
-        x = (-opss1 - opss2 - opss3 - 4 * ock + Math.Sqrt(Math.Pow(opss1 + opss2 + opss3 + 4 * ock, 2) - 16 * ((-10000 / (t * hcc)) + ock * (opss1 + opss2 + opss3)))) / 8;
-        res[0] = Math.Abs(opss1 + 2 * x);
-        res[1] = Math.Abs(opss2 + 2 * x);
-        res[2] = Math.Abs(ock + x);
-        res[3] = x;
-        res[4] = newHcc;
-        return res;
-    }
-
 }

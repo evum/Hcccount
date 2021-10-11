@@ -1,6 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 
+
+/// <summary>
+/// Основной класс логики программы
+/// </summary>
 public class Result
 {
     private const int MAXSISTOL = 300;
@@ -120,18 +124,31 @@ public class Result
     {
         s = Math.Round((t * Hcc * 3 * (Opss1 + Opss2 + Opss3) * 4 * Ock) / 1000);
     }
-    
-    private void res_s(double hcc, double opss1, double opss2, double opss3, double ock)
+
+    /// <summary>
+    /// Перегруженная функция для подсчёта систолического давления по переданным параметрам. 
+    /// Использует значение коэффициента, хранящееся в данном классе
+    /// </summary>
+    /// <returns>Значение систолического давления двойной точности</returns>
+    public double res_s(double hcc, double opss1, double opss2, double opss3, double ock)
     {
         s = Math.Round((t * hcc * 3 * (opss1 + opss2 + opss3) * 4 * ock) / 1000);
+        return s;
     }
     private void res_d()
     {
         d = Math.Round((t_d * Hcc * 6 * (Opss1 + Opss2 + Opss3) * 4 * Ock) / 1000);
     }
-    private void res_d(double hcc, double opss1, double opss2, double opss3, double ock)
+
+    /// <summary>
+    /// Перегруженная функция для подсчёта диастолического давления по переданным параметрам.
+    /// Использует значение коэффициента, хранящееся в данном классе
+    /// </summary>
+    /// <returns>Значение диастолического давления двойной точности</returns>
+    public double res_d(double hcc, double opss1, double opss2, double opss3, double ock)
     {
         d = Math.Round((t_d * hcc * 6 * (opss1 + opss2 + opss3) * 4 * ock) / 1000);
+        return d;
     }
     private void res_a()
     {
@@ -157,14 +174,15 @@ public class Result
         nerv = new Nerv();
     }
 
-    public double[][] NervRegulation()
-    {
-        double[][] res = new double[2][];
-        res[0] = nerv.compensationDiastol(Hcc, Opss1, Opss2, Opss3, Ock, t_d, d);
-        res[1] = nerv.compensationSistol(Hcc, Opss1, Opss2, Opss3, Ock, t, s);
 
-        res_s(Hcc, res[1][0], res[1][1], Opss3, res[1][2]);
-        res_d(Hcc, res[0][0], res[0][1], Opss3, res[0][2]);
+    /// <summary>
+    /// Функция, запускающая компенсацию давления нервом
+    /// </summary>
+    /// <returns>Коллекция посчитанных значений</returns>
+    public Dictionary<String, double> NervRegulation()
+    {
+        var res = nerv.Сompensation(Hcc, Opss1, Opss2, Opss3, Ock, t);
+        
         return res;
     }
 }

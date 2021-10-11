@@ -16,11 +16,11 @@ class Nerv
     /// Функция вычисления всех параметров
     /// </summary>
     /// <returns>Коллекция новых значений для Чсс, опсс 1, 2, 3 и оцк</returns>
-    public Dictionary<String, double> Сompensation(int hcc, int opss1, int opss2, int opss3, int ock, double t)
+    public Dictionary<String, double> Сompensation(int hcc, int opss1, int opss2, int opss3, int ock, double t, Dictionary<string, bool> WhatIsBlocked)
     {
         var res = new Dictionary<String, double>();
         double x;
-        x = mathematics.FindRoots(hcc, opss1, opss2, opss3, ock, t);
+        x = mathematics.FindRoots(hcc, opss1, opss2, opss3, ock, t, WhatIsBlocked);
         res["Opss1"] = Math.Abs(opss1 + 3 * x) % 6;
         res["Opss2"] = Math.Abs(opss2 + 3 * x) % 6;
         res["Opss3"] = opss3;

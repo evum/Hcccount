@@ -67,6 +67,11 @@ namespace WindowsFormsApp1
             this.labelNervComp = new System.Windows.Forms.Label();
             this.buttonNerv = new System.Windows.Forms.Button();
             this.buttonSaveLog = new System.Windows.Forms.Button();
+            this.checkBoxOckBlock = new System.Windows.Forms.CheckBox();
+            this.checkBoxOpss3Block = new System.Windows.Forms.CheckBox();
+            this.checkBoxOpss1Block = new System.Windows.Forms.CheckBox();
+            this.checkBoxOpss2Block = new System.Windows.Forms.CheckBox();
+            this.checkBoxHccBlock = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarHcc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarOpss1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarOck)).BeginInit();
@@ -515,12 +520,72 @@ namespace WindowsFormsApp1
             this.buttonSaveLog.UseVisualStyleBackColor = true;
             this.buttonSaveLog.Click += new System.EventHandler(this.buttonSaveLog_Click);
             // 
+            // checkBoxOckBlock
+            // 
+            this.checkBoxOckBlock.AutoSize = true;
+            this.checkBoxOckBlock.Location = new System.Drawing.Point(1140, 447);
+            this.checkBoxOckBlock.Name = "checkBoxOckBlock";
+            this.checkBoxOckBlock.Size = new System.Drawing.Size(83, 17);
+            this.checkBoxOckBlock.TabIndex = 53;
+            this.checkBoxOckBlock.Text = "Нарушение";
+            this.checkBoxOckBlock.UseVisualStyleBackColor = true;
+            this.checkBoxOckBlock.CheckedChanged += new System.EventHandler(this.checkBoxOckBlock_CheckedChanged);
+            // 
+            // checkBoxOpss3Block
+            // 
+            this.checkBoxOpss3Block.AutoSize = true;
+            this.checkBoxOpss3Block.Location = new System.Drawing.Point(1140, 381);
+            this.checkBoxOpss3Block.Name = "checkBoxOpss3Block";
+            this.checkBoxOpss3Block.Size = new System.Drawing.Size(83, 17);
+            this.checkBoxOpss3Block.TabIndex = 54;
+            this.checkBoxOpss3Block.Text = "Нарушение";
+            this.checkBoxOpss3Block.UseVisualStyleBackColor = true;
+            this.checkBoxOpss3Block.CheckedChanged += new System.EventHandler(this.checkBoxOpss3Block_CheckedChanged);
+            // 
+            // checkBoxOpss1Block
+            // 
+            this.checkBoxOpss1Block.AutoSize = true;
+            this.checkBoxOpss1Block.Location = new System.Drawing.Point(1140, 256);
+            this.checkBoxOpss1Block.Name = "checkBoxOpss1Block";
+            this.checkBoxOpss1Block.Size = new System.Drawing.Size(83, 17);
+            this.checkBoxOpss1Block.TabIndex = 55;
+            this.checkBoxOpss1Block.Text = "Нарушение";
+            this.checkBoxOpss1Block.UseVisualStyleBackColor = true;
+            this.checkBoxOpss1Block.CheckedChanged += new System.EventHandler(this.checkBoxOpss1Block_CheckedChanged);
+            // 
+            // checkBoxOpss2Block
+            // 
+            this.checkBoxOpss2Block.AutoSize = true;
+            this.checkBoxOpss2Block.Location = new System.Drawing.Point(1140, 325);
+            this.checkBoxOpss2Block.Name = "checkBoxOpss2Block";
+            this.checkBoxOpss2Block.Size = new System.Drawing.Size(83, 17);
+            this.checkBoxOpss2Block.TabIndex = 55;
+            this.checkBoxOpss2Block.Text = "Нарушение";
+            this.checkBoxOpss2Block.UseVisualStyleBackColor = true;
+            this.checkBoxOpss2Block.CheckedChanged += new System.EventHandler(this.checkBoxOpss2Block_CheckedChanged);
+            // 
+            // checkBoxHccBlock
+            // 
+            this.checkBoxHccBlock.AutoSize = true;
+            this.checkBoxHccBlock.Location = new System.Drawing.Point(372, 58);
+            this.checkBoxHccBlock.Name = "checkBoxHccBlock";
+            this.checkBoxHccBlock.Size = new System.Drawing.Size(83, 17);
+            this.checkBoxHccBlock.TabIndex = 56;
+            this.checkBoxHccBlock.Text = "Нарушение";
+            this.checkBoxHccBlock.UseVisualStyleBackColor = true;
+            this.checkBoxHccBlock.CheckedChanged += new System.EventHandler(this.checkBoxHccBlock_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Hcccount.Properties.Resources.background;
             this.ClientSize = new System.Drawing.Size(1354, 733);
+            this.Controls.Add(this.checkBoxHccBlock);
+            this.Controls.Add(this.checkBoxOpss2Block);
+            this.Controls.Add(this.checkBoxOpss1Block);
+            this.Controls.Add(this.checkBoxOpss3Block);
+            this.Controls.Add(this.checkBoxOckBlock);
             this.Controls.Add(this.buttonSaveLog);
             this.Controls.Add(this.buttonNerv);
             this.Controls.Add(this.labelNervComp);
@@ -611,6 +676,11 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label labelNervComp;
         private System.Windows.Forms.Button buttonNerv;
         private System.Windows.Forms.Button buttonSaveLog;
+        private System.Windows.Forms.CheckBox checkBoxOckBlock;
+        private System.Windows.Forms.CheckBox checkBoxOpss3Block;
+        private System.Windows.Forms.CheckBox checkBoxOpss1Block;
+        private System.Windows.Forms.CheckBox checkBoxOpss2Block;
+        private System.Windows.Forms.CheckBox checkBoxHccBlock;
     }
 }
 

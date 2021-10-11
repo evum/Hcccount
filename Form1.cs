@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
 
@@ -212,9 +213,11 @@ namespace WindowsFormsApp1
         /// </summary>
         private void buttonNerv_Click(object sender, EventArgs e)
         {
-            double sistol; 
+            Dictionary<String, bool> WhatIsBlocked = new Dictionary<string, bool>();
+            WhatIsBlocked = WhichIsBlocked(WhatIsBlocked);
+            double sistol;
             double diastol;
-            var res = body.NervRegulation(); // Вызов функции поиска новых значений
+            var res = body.NervRegulation(WhatIsBlocked); // Вызов функции поиска новых значений
             sistol = body.res_s(res["Hcc"], res["Opss1"], res["Opss2"], res["Opss3"], res["Ock"]); // Подсчёт систолического давления для новых значений
             diastol = body.res_d(res["Hcc"], res["Opss1"], res["Opss2"], res["Opss3"], res["Ock"]);// Подсчёт диастолического давления для новых значений
             labelNervComp.Text = "Диастолическое: " + "\nЗначение опсс1 должно быть: " + res["Opss1"] + "\nЗначение опсс2 должно быть: " +
@@ -257,6 +260,41 @@ namespace WindowsFormsApp1
             {
                 Console.WriteLine(r.Message);
             }*/
+        }
+
+        private void checkBoxOckBlock_CheckedChanged(object sender, EventArgs e)
+        {
+            trackBarOck.Enabled = !trackBarOck.Enabled;
+        }
+
+        private void checkBoxOpss3Block_CheckedChanged(object sender, EventArgs e)
+        {
+            trackBarOpss3.Enabled = !trackBarOpss3.Enabled;
+        }
+
+        private void checkBoxOpss2Block_CheckedChanged(object sender, EventArgs e)
+        {
+            trackBarOpss2.Enabled = !trackBarOpss2.Enabled;
+        }
+
+        private void checkBoxOpss1Block_CheckedChanged(object sender, EventArgs e)
+        {
+            trackBarOpss1.Enabled = !trackBarOpss1.Enabled;
+        }
+
+        private void checkBoxHccBlock_CheckedChanged(object sender, EventArgs e)
+        {
+            trackBarHcc.Enabled = !trackBarHcc.Enabled;
+        }
+
+        private Dictionary<String, Boolean> WhichIsBlocked(Dictionary<String, Boolean> WhatIsBlock)
+        {
+            WhatIsBlock["Opss1"] = !trackBarOpss1.Enabled;
+            WhatIsBlock["Opss2"] = !trackBarOpss2.Enabled;
+            WhatIsBlock["Opss3"] = !trackBarOpss3.Enabled;
+            WhatIsBlock["Ock"] = !trackBarOck.Enabled;
+            WhatIsBlock["Hcc"] = !trackBarHcc.Enabled;
+            return WhatIsBlock;
         }
     }
 }

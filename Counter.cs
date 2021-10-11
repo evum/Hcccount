@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 /// <summary>
 /// Класс для реализации приближённых вычислений
 /// </summary>
@@ -15,8 +16,17 @@ public class Counter
     /// <summary>
     /// Поиск корней
     /// </summary>
-    public double FindRoots(double Hcc, int opss1, int opss2, int opss3, int ock, double t)
+    public double FindRoots(double Hcc, int opss1, int opss2, int opss3, int ock, double t, Dictionary<String, bool> WhatIsBlocked)
     {
+        double m;
+        double l;
+        double n;
+        double k;
+        double g;
+        if (WhatIsBlocked["Opss1"] == false)
+        {
+            m = 
+        }
         a = 0;
         b = 100;
         double x = 0;
@@ -40,7 +50,7 @@ public class Counter
     /// <summary>
     /// Функция, по которой ищется х
     /// </summary>
-    private double function(double x, double Hcc, int opss1, int opss2, int opss3, int ock, double t)
+    private double function(double x, double Hcc, int opss1, int opss2, int opss3, int ock, double t, Dictionary<String, bool> WhatIsBlocked)
     {
 		double f = t * ((Hcc + 3 * x) % Hcc) * 3 * (Math.Abs(opss1 + 3 * x) % 6 + Math.Abs(opss2 + 3 * x) % 6 + opss3) * 4 * (Math.Abs(ock + x) % 7) - IDEALDIASTOL;
 		return f;

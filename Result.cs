@@ -179,9 +179,9 @@ public class Result
     /// Функция, запускающая компенсацию давления нервом
     /// </summary>
     /// <returns>Коллекция посчитанных значений</returns>
-    public Dictionary<String, double> NervRegulation()
+    public Dictionary<String, double> NervRegulation(Dictionary<String, bool> WhatIsBlocked)
     {
-        var res = nerv.Сompensation(Hcc, Opss1, Opss2, Opss3, Ock, t);
+        var res = nerv.Сompensation(Hcc, Opss1, Opss2, Opss3, Ock, t, WhatIsBlocked);
         
         return res;
     }

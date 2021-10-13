@@ -221,7 +221,7 @@ namespace WindowsFormsApp1
             sistol = body.res_s(res["Hcc"], res["Opss1"], res["Opss2"], res["Opss3"], res["Ock"]); // Подсчёт систолического давления для новых значений
             diastol = body.res_d(res["Hcc"], res["Opss1"], res["Opss2"], res["Opss3"], res["Ock"]);// Подсчёт диастолического давления для новых значений
             labelNervComp.Text = "Диастолическое: " + "\nЗначение опсс1 должно быть: " + res["Opss1"] + "\nЗначение опсс2 должно быть: " +
-                res["Opss2"] + "\nЗначение оцк должно быть: " + res["Ock"] + "\nЗначение Чсс: " + res["Hcc"] + "\nСистолическое: " + sistol +
+                res["Opss2"] + "\nЗначение оцк должно быть: " + res["Opss3"] + "\nЗначение оцк должно быть: " + res["Ock"] + "\nЗначение Чсс: " + res["Hcc"] + "\nСистолическое: " + sistol +
                 "\nДиастолическое: " + diastol; //Вывод всех значений
 
         }

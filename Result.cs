@@ -181,7 +181,7 @@ public class Result
     /// <returns>Коллекция посчитанных значений</returns>
     public Dictionary<String, double> NervRegulation(Dictionary<String, bool> WhatIsBlocked)
     {
-        var res = nerv.Сompensation(Hcc, Opss1, Opss2, Opss3, Ock, t, WhatIsBlocked);
+        var res = nerv.Сompensation(Hcc, Opss1, Opss2, Opss3, Ock, t_d, WhatIsBlocked);
         
         return res;
     }

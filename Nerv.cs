@@ -21,11 +21,50 @@ class Nerv
         var res = new Dictionary<String, double>();
         double x;
         x = mathematics.FindRoots(hcc, opss1, opss2, opss3, ock, t, WhatIsBlocked);
-        res["Opss1"] = Math.Abs(opss1 + 3 * x) % 6;
-        res["Opss2"] = Math.Abs(opss2 + 3 * x) % 6;
-        res["Opss3"] = opss3;
-        res["Ock"] = Math.Abs(ock + x) % 7;
-        res["Hcc"] = (hcc + 3 * x) % hcc;
+
+        if (WhatIsBlocked["Opss1"] == false)
+        {
+            res["Opss1"] = Math.Abs(opss1 + 3 * x) % 6;
+        }
+        else
+        {
+            res["Opss1"] = opss1;
+        }
+
+        if (WhatIsBlocked["Opss2"] == false)
+        {
+            res["Opss2"] = Math.Abs(opss2 + 3 * x) % 6;
+        }
+        else
+        {
+            res["Opss2"] = opss2;
+        }
+        if (WhatIsBlocked["Opss3"] == false)
+        {
+            res["Opss3"] = Math.Abs(opss3 + 3 * x) % 6;
+        }
+        else
+        {
+            res["Opss3"] = opss3;
+        }
+        if (WhatIsBlocked["Ock"] == false)
+        {
+            res["Ock"] = Math.Abs(ock + x) % 7;
+        }
+        else
+        {
+            res["Ock"] = ock;
+        }
+
+        if (WhatIsBlocked["Hcc"] == false)
+        {
+            res["Hcc"] = (hcc + 3 * x) % hcc;
+        }
+        else
+        {
+            res["Hcc"] = hcc;
+        }
+
         return res;
     }
 }
